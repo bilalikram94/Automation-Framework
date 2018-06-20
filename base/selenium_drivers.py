@@ -5,6 +5,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *
 import utilities.custom_logger as cl
 import logging
+import time
+import os
 
 
 class SeleniumDriver():
@@ -18,17 +20,17 @@ class SeleniumDriver():
 
     def getByType(self, locatorType):
         locatorType = locatorType.lower()
-        if locatorType == "id":
+        if locatorType=="id":
             return By.ID
-        elif locatorType == "name":
+        elif locatorType=="name":
             return By.NAME
-        elif locatorType == "xpath":
+        elif locatorType=="xpath":
             return By.XPATH
-        elif locatorType == "css":
+        elif locatorType=="css":
             return By.CSS_SELECTOR
-        elif locatorType == "class":
+        elif locatorType=="class":
             return By.CLASS_NAME
-        elif locatorType == "link":
+        elif locatorType=="link":
             return By.LINK_TEXT
         else:
             self.log.info("Locator type " + locatorType +
@@ -114,3 +116,23 @@ class SeleniumDriver():
             self.log.info("Element not appeared on the web page" + locator)
             print_stack()
         return element
+
+    def screenShot(self, resultMessage):
+        """
+        Takes screenshot of the current open web page
+        """
+        fileName = resultMessage + "." + str(round(time.time() * 1000)) + ".png"
+        screenshotDirectory = "C:\\Users\\Bilal.Ikram\\PycharmProjects\\Automation-Framework\\screenshots"
+        relativeFileName = screenshotDirectory + fileName
+        currentDirectory = os.path.dirname(__file__)
+        destinationFile = os.path.join(currentDirectory, relativeFileName)
+        destinationDirectory = os.path.join(currentDirectory, screenshotDirectory)
+
+        try:
+            if not os.path.exists(destinationDirectory):
+                os.makedirs(destinationDirectory)
+            self.driver.save_screenshot(destinationFile)
+            self.log.info("Screenshot save to directory: " + destinationFile)
+        except:
+            self.log.error("### Exception Occurred when taking screenshot")
+            print_stack()
