@@ -1,0 +1,18 @@
+1528285227966	geckodriver	INFO	geckodriver 0.20.1
+1528285227998	geckodriver	INFO	Listening on 127.0.0.1:49226
+1528285230986	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\BILAL~1.IKR\\AppData\\Local\\Temp\\rust_mozprofile.z9vw0cnKi2qB"
+1528285235937	Marionette	INFO	Listening on port 49238
+1528285236366	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Bilal.Ikram\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: http://static.parastorage.com/polyfill/v2/polyfill.min.js?features=es2015,es2016,es2017,fetch&flags=always,gated&unknown=polyfill&rum=0&callback=polyfillsAreLoaded, line 1: SyntaxError: illegal character
+Unable to read VR Path Registry from C:\Users\Bilal.Ikram\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 10768, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10296, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10296, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 10768, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Bilal.Ikram\AppData\Local\openvr\openvrpaths.vrpath
+[Child 10980, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10980, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

@@ -1,0 +1,5 @@
+{
+  "tests/home/all_courses_test.py::AllCoursesTest::test_logout": true,
+  "tests/home/login_test.py::LoginTest::test_invalidLogin": true,
+  "tests/home/login_test.py::LoginTest::test_validLogin": true
+}
