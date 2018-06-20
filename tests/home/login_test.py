@@ -22,19 +22,19 @@ class LoginTests(unittest.TestCase):
     def test_validLogin(self):
         self.lp.login("test@email.com", "abcabc")
         result1 = self.lp.verifyTitle()
-        self.ts.mark(result1, "Title is incorrect")
+        self.ts.mark(result1, "Title Verified")
         result2 = self.lp.verifyLoginSuccessful()
-        self.ts.markFinal("test_validLogin", result2, "Login was not successful")
+        self.ts.markFinal("test_validLogin", result2, "Login was successful")
 
     @pytest.mark.run(order=1)
     def test_invalidLogin(self):
         time.sleep(3)
         self.lp.login("test@email.com", "abcabcabc")
         result = self.lp.verifyLoginFailed()
-        self.ts.markFinal("test_invalidLogin", result, "Login was successful")
+        self.ts.markFinal("test_invalidLogin", result, "Login wasn't successful")
 
     @pytest.mark.run(order=3)
     def test_validlogout(self):
         self.lp.Logout()
         result = self.lp.verifySuccessfulLogout()
-        self.ts.markFinal("test_validLogout", result, "Logout unsuccessful")
+        self.ts.markFinal("test_validLogout", result, "Logout successful")
